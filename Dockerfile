@@ -19,4 +19,4 @@ RUN export KVER=$(echo ${KERNEL_VERSION} | cut -d '-' -f 1) \
         make SYSSRC=${KERNEL_SOURCES} SYSOUT=${KERNEL_OUTPUT} modules
 
 FROM scratch
-COPY --from=builder /home/builder/open-gpu-kernel-modules/kernel-open/*.ko /drivers
+COPY --from=builder /home/builder/open-gpu-kernel-modules/kernel-open/*.ko /drivers/
